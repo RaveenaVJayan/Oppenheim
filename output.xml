@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220712 20:48:49.680" rpa="false" schemaversion="3">
+<suite id="s1" name="Oppenheimer Project" source="D:\Repo\Oppenheim\TestCases\Oppenheimer_Project.robot">
+<test id="s1-t1" name="TC6: Normal Rounding of Tax Relief" line="19">
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${base_url}/calculator/taxRelief</arg>
+<arg>params=query=.00</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20220712 20:48:50.483" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief?query=.00 
+ path_url=/calculator/taxRelief?query=.00 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220712 20:48:50.483" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief?query=.00 
+ status=200, reason= 
+ headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Tue, 12 Jul 2022 15:18:50 GMT'} 
+ body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129$$$$$","name":"PQR","relief":"1716.00"},{"natid":"0129$$$$$","name":"PQR","relief":"1716.00"},{"natid":"0129$$$$$","name":"PQR","relief":"1716.00"}] 
+ </msg>
+<msg timestamp="20220712 20:48:50.483" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220712 20:48:50.259" endtime="20220712 20:48:50.483"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 20:48:50.483" endtime="20220712 20:48:50.483"/>
+</kw>
+<status status="PASS" starttime="20220712 20:48:50.259" endtime="20220712 20:48:50.483"/>
+</test>
+<status status="PASS" starttime="20220712 20:48:49.680" endtime="20220712 20:48:50.483"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Oppenheimer Project">Oppenheimer Project</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
