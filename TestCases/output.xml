@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220718 01:59:27.433" rpa="false" schemaversion="3">
-<suite id="s1" name="Oppenheimer Project" source="D:\Repo\Oppenheim\TestCases\Oppenheimer_Project.robot">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220718 02:02:39.476" rpa="false" schemaversion="3">
+<suite id="s1" name="Oppenheimer Project" source="D:\Repo\Oppenheim\testcases\Oppenheimer_Project.robot">
 <test id="s1-t1" name="TC1 : Insert single record of working class hero" line="20">
 <kw name="Create Session" library="RequestsLibrary">
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220718 01:59:27.872" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20220718 01:59:27.872" endtime="20220718 01:59:27.872"/>
+<msg timestamp="20220718 02:02:39.889" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20220718 02:02:39.889" endtime="20220718 02:02:39.889"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${body}</var>
@@ -19,8 +19,8 @@
 <arg>salary=1000</arg>
 <arg>tax=150</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220718 01:59:27.872" level="INFO">${body} = {'birthday': '09021993', 'gender': 'F', 'name': 'ABC', 'natid': '0129', 'salary': '1000', 'tax': '150'}</msg>
-<status status="PASS" starttime="20220718 01:59:27.872" endtime="20220718 01:59:27.872"/>
+<msg timestamp="20220718 02:02:39.889" level="INFO">${body} = {'birthday': '09021993', 'gender': 'F', 'name': 'ABC', 'natid': '0129', 'salary': '1000', 'tax': '150'}</msg>
+<status status="PASS" starttime="20220718 02:02:39.889" endtime="20220718 02:02:39.889"/>
 </kw>
 <kw name="POST On Session" library="RequestsLibrary">
 <var>${response}</var>
@@ -29,26 +29,26 @@
 <arg>json=${body}</arg>
 <arg>expected_status=202</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20220718 01:59:27.903" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+<msg timestamp="20220718 02:02:39.920" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
  path_url=/calculator/insert 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '103', 'Content-Type': 'application/json'} 
  body=b'{"birthday": "09021993", "gender": "F", "name": "ABC", "natid": "0129", "salary": "1000", "tax": "150"}' 
  </msg>
-<msg timestamp="20220718 01:59:27.903" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+<msg timestamp="20220718 02:02:39.920" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
  status=202, reason= 
- headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sun, 17 Jul 2022 20:29:27 GMT'} 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sun, 17 Jul 2022 20:32:39 GMT'} 
  body=Alright 
  </msg>
-<msg timestamp="20220718 01:59:27.903" level="INFO">${response} = &lt;Response [202]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:27.872" endtime="20220718 01:59:27.903"/>
+<msg timestamp="20220718 02:02:39.920" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:39.889" endtime="20220718 02:02:39.920"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>202</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220718 01:59:27.903" endtime="20220718 01:59:27.903"/>
+<status status="PASS" starttime="20220718 02:02:39.920" endtime="20220718 02:02:39.922"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:27.872" endtime="20220718 01:59:27.903"/>
+<status status="PASS" starttime="20220718 02:02:39.889" endtime="20220718 02:02:39.922"/>
 </test>
 <test id="s1-t2" name="TC2: Insert single record of working class hero with missing fields" line="26">
 <kw name="Create Session" library="RequestsLibrary">
@@ -56,8 +56,8 @@
 <arg>${base_url}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220718 01:59:27.903" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20220718 01:59:27.903" endtime="20220718 01:59:27.903"/>
+<msg timestamp="20220718 02:02:39.922" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20220718 02:02:39.922" endtime="20220718 02:02:39.922"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${body}</var>
@@ -68,8 +68,8 @@
 <arg>salary=</arg>
 <arg>tax=150</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220718 01:59:27.903" level="INFO">${body} = {'birthday': '04061991', 'gender': 'M', 'name': 'XYZ', 'natid': '0130', 'salary': '', 'tax': '150'}</msg>
-<status status="PASS" starttime="20220718 01:59:27.903" endtime="20220718 01:59:27.903"/>
+<msg timestamp="20220718 02:02:39.922" level="INFO">${body} = {'birthday': '04061991', 'gender': 'M', 'name': 'XYZ', 'natid': '0130', 'salary': '', 'tax': '150'}</msg>
+<status status="PASS" starttime="20220718 02:02:39.922" endtime="20220718 02:02:39.922"/>
 </kw>
 <kw name="POST On Session" library="RequestsLibrary">
 <var>${response}</var>
@@ -78,26 +78,26 @@
 <arg>json=${body}</arg>
 <arg>expected_status=500</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20220718 01:59:27.919" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+<msg timestamp="20220718 02:02:39.922" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
  path_url=/calculator/insert 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '99', 'Content-Type': 'application/json'} 
  body=b'{"birthday": "04061991", "gender": "M", "name": "XYZ", "natid": "0130", "salary": "", "tax": "150"}' 
  </msg>
-<msg timestamp="20220718 01:59:27.919" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+<msg timestamp="20220718 02:02:39.922" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
  status=500, reason= 
- headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:29:27 GMT', 'Connection': 'close'} 
- body={"timestamp":"2022-07-17T20:29:27.918+0000","status":500,"error":"Internal Server Error","message":"No message available","path":"/calculator/insert"} 
+ headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:32:39 GMT', 'Connection': 'close'} 
+ body={"timestamp":"2022-07-17T20:32:39.922+0000","status":500,"error":"Internal Server Error","message":"No message available","path":"/calculator/insert"} 
  </msg>
-<msg timestamp="20220718 01:59:27.919" level="INFO">${response} = &lt;Response [500]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:27.903" endtime="20220718 01:59:27.919"/>
+<msg timestamp="20220718 02:02:39.922" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:39.922" endtime="20220718 02:02:39.922"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>500</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220718 01:59:27.919" endtime="20220718 01:59:27.919"/>
+<status status="PASS" starttime="20220718 02:02:39.922" endtime="20220718 02:02:39.922"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:27.903" endtime="20220718 01:59:27.919"/>
+<status status="PASS" starttime="20220718 02:02:39.922" endtime="20220718 02:02:39.922"/>
 </test>
 <test id="s1-t3" name="TC3: Insert single record of working class hero with invalid gender value male/female" line="32">
 <kw name="Create Session" library="RequestsLibrary">
@@ -105,8 +105,8 @@
 <arg>${base_url}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220718 01:59:27.934" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20220718 01:59:27.934" endtime="20220718 01:59:27.934"/>
+<msg timestamp="20220718 02:02:39.938" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20220718 02:02:39.938" endtime="20220718 02:02:39.938"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${body}</var>
@@ -117,8 +117,8 @@
 <arg>salary=1400</arg>
 <arg>tax=150</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220718 01:59:27.934" level="INFO">${body} = {'birthday': '09021993', 'gender': 'Female', 'name': 'ABC', 'natid': '0159', 'salary': '1400', 'tax': '150'}</msg>
-<status status="PASS" starttime="20220718 01:59:27.934" endtime="20220718 01:59:27.934"/>
+<msg timestamp="20220718 02:02:39.938" level="INFO">${body} = {'birthday': '09021993', 'gender': 'Female', 'name': 'ABC', 'natid': '0159', 'salary': '1400', 'tax': '150'}</msg>
+<status status="PASS" starttime="20220718 02:02:39.938" endtime="20220718 02:02:39.938"/>
 </kw>
 <kw name="POST On Session" library="RequestsLibrary">
 <var>${response}</var>
@@ -127,26 +127,26 @@
 <arg>json=${body}</arg>
 <arg>expected_status=500</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20220718 01:59:27.950" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+<msg timestamp="20220718 02:02:39.953" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
  path_url=/calculator/insert 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '108', 'Content-Type': 'application/json'} 
  body=b'{"birthday": "09021993", "gender": "Female", "name": "ABC", "natid": "0159", "salary": "1400", "tax": "150"}' 
  </msg>
-<msg timestamp="20220718 01:59:27.950" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+<msg timestamp="20220718 02:02:39.953" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
  status=500, reason= 
- headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:29:27 GMT', 'Connection': 'close'} 
- body={"timestamp":"2022-07-17T20:29:27.950+0000","status":500,"error":"Internal Server Error","message":"could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.DataException: could not execute statement","path":"/calculator/insert"} 
+ headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:32:39 GMT', 'Connection': 'close'} 
+ body={"timestamp":"2022-07-17T20:32:39.953+0000","status":500,"error":"Internal Server Error","message":"could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.DataException: could not execute statement","path":"/calculator/insert"} 
  </msg>
-<msg timestamp="20220718 01:59:27.950" level="INFO">${response} = &lt;Response [500]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:27.934" endtime="20220718 01:59:27.950"/>
+<msg timestamp="20220718 02:02:39.953" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:39.938" endtime="20220718 02:02:39.953"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>500</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220718 01:59:27.950" endtime="20220718 01:59:27.950"/>
+<status status="PASS" starttime="20220718 02:02:39.953" endtime="20220718 02:02:39.953"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:27.919" endtime="20220718 01:59:27.950"/>
+<status status="PASS" starttime="20220718 02:02:39.938" endtime="20220718 02:02:39.953"/>
 </test>
 <test id="s1-t4" name="TC4: Insert multiple record of working class hero" line="38">
 <kw name="Create Session" library="RequestsLibrary">
@@ -154,90 +154,90 @@
 <arg>${base_url}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220718 01:59:27.966" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20220718 01:59:27.966" endtime="20220718 01:59:27.966"/>
+<msg timestamp="20220718 02:02:39.962" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20220718 02:02:39.962" endtime="20220718 02:02:39.963"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${REQUESTDATA.insert_multiple.records}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220718 01:59:27.966" endtime="20220718 01:59:27.966"/>
+<status status="PASS" starttime="20220718 02:02:39.963" endtime="20220718 02:02:39.964"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:27.966" endtime="20220718 01:59:27.966"/>
+<status status="PASS" starttime="20220718 02:02:39.953" endtime="20220718 02:02:39.964"/>
 </test>
 <test id="s1-t5" name="TC5:Insert records by uploading CSV file" line="45">
 <kw name="Read Csv As List" library="CSVLib">
 <var>${list}</var>
-<arg>./TestCases/data.csv</arg>
-<msg timestamp="20220718 01:59:27.977" level="INFO">${list} = [['birthday', 'gender', 'name', 'natid', 'salary', 'tax'], ['20062009', 'F', 'Shiela', '777-$$$$$$$', '3000', '150'], ['11091985', 'M', 'Charles', '887-$$$$$$$', '4500', '220'], ['09122000', 'M', 'Rah...</msg>
-<status status="PASS" starttime="20220718 01:59:27.976" endtime="20220718 01:59:27.977"/>
+<arg>data.csv</arg>
+<msg timestamp="20220718 02:02:39.966" level="INFO">${list} = [['birthday', 'gender', 'name', 'natid', 'salary', 'tax'], ['20062009', 'F', 'Shiela', '777-$$$$$$$', '3000', '150'], ['11091985', 'M', 'Charles', '887-$$$$$$$', '4500', '220'], ['09122000', 'M', 'Rah...</msg>
+<status status="PASS" starttime="20220718 02:02:39.966" endtime="20220718 02:02:39.966"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[0][0]}</arg>
 <arg>birthday</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.977" endtime="20220718 01:59:27.978"/>
+<status status="PASS" starttime="20220718 02:02:39.966" endtime="20220718 02:02:39.967"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[0][1]}</arg>
 <arg>gender</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.978" endtime="20220718 01:59:27.979"/>
+<status status="PASS" starttime="20220718 02:02:39.967" endtime="20220718 02:02:39.968"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[0][2]}</arg>
 <arg>name</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.979" endtime="20220718 01:59:27.980"/>
+<status status="PASS" starttime="20220718 02:02:39.968" endtime="20220718 02:02:39.969"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[0][3]}</arg>
 <arg>natid</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.980" endtime="20220718 01:59:27.982"/>
+<status status="PASS" starttime="20220718 02:02:39.970" endtime="20220718 02:02:39.971"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[0][4]}</arg>
 <arg>salary</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.983" endtime="20220718 01:59:27.984"/>
+<status status="PASS" starttime="20220718 02:02:39.972" endtime="20220718 02:02:39.973"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[0][5]}</arg>
 <arg>tax</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.985" endtime="20220718 01:59:27.986"/>
+<status status="PASS" starttime="20220718 02:02:39.973" endtime="20220718 02:02:39.974"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[1][0]}</arg>
 <arg>20062009</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.987" endtime="20220718 01:59:27.988"/>
+<status status="PASS" starttime="20220718 02:02:39.974" endtime="20220718 02:02:39.975"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[1][1]}</arg>
 <arg>F</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.989" endtime="20220718 01:59:27.990"/>
+<status status="PASS" starttime="20220718 02:02:39.975" endtime="20220718 02:02:39.976"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[1][3]}</arg>
 <arg>777-$$$$$$$</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.990" endtime="20220718 01:59:27.991"/>
+<status status="PASS" starttime="20220718 02:02:39.976" endtime="20220718 02:02:39.977"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[1][4]}</arg>
 <arg>3000</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.992" endtime="20220718 01:59:27.993"/>
+<status status="PASS" starttime="20220718 02:02:39.977" endtime="20220718 02:02:39.978"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${list[1][5]}</arg>
 <arg>150</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220718 01:59:27.993" endtime="20220718 01:59:27.994"/>
+<status status="PASS" starttime="20220718 02:02:39.978" endtime="20220718 02:02:39.979"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:27.975" endtime="20220718 01:59:27.994"/>
+<status status="PASS" starttime="20220718 02:02:39.965" endtime="20220718 02:02:39.979"/>
 </test>
 <test id="s1-t6" name="TC6: Display NatID, Tax Relief , Name" line="62">
 <kw name="GET" library="RequestsLibrary">
@@ -245,25 +245,25 @@
 <arg>${base_url}/calculator/taxRelief</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220718 01:59:28.007" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief 
+<msg timestamp="20220718 02:02:39.992" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief 
  path_url=/calculator/taxRelief 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220718 01:59:28.007" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief 
+<msg timestamp="20220718 02:02:39.992" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief 
  status=200, reason= 
- headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:29:27 GMT'} 
- body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"}] 
+ headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:32:39 GMT'} 
+ body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"}] 
  </msg>
-<msg timestamp="20220718 01:59:28.007" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:27.996" endtime="20220718 01:59:28.007"/>
+<msg timestamp="20220718 02:02:39.992" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:39.981" endtime="20220718 02:02:39.993"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220718 01:59:28.007" endtime="20220718 01:59:28.007"/>
+<status status="PASS" starttime="20220718 02:02:39.993" endtime="20220718 02:02:39.995"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:27.995" endtime="20220718 01:59:28.007"/>
+<status status="PASS" starttime="20220718 02:02:39.980" endtime="20220718 02:02:39.995"/>
 </test>
 <test id="s1-t7" name="TC7: Mask the NatID from 5th character" line="66">
 <kw name="GET" library="RequestsLibrary">
@@ -272,106 +272,106 @@
 <arg>params=query=-$$$$$$$</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220718 01:59:28.023" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief?query=-$$$$$$$ 
+<msg timestamp="20220718 02:02:39.995" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief?query=-$$$$$$$ 
  path_url=/calculator/taxRelief?query=-$$$$$$$ 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220718 01:59:28.023" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief?query=-$$$$$$$ 
+<msg timestamp="20220718 02:02:39.995" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief?query=-$$$$$$$ 
  status=200, reason= 
- headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:29:27 GMT'} 
- body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"}] 
+ headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:32:39 GMT'} 
+ body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"}] 
  </msg>
-<msg timestamp="20220718 01:59:28.023" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:28.007" endtime="20220718 01:59:28.023"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:39.995" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220718 01:59:28.023" endtime="20220718 01:59:28.023"/>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:28.007" endtime="20220718 01:59:28.023"/>
+<status status="PASS" starttime="20220718 02:02:39.995" endtime="20220718 02:02:40.011"/>
 </test>
 <test id="s1-t8" name="TC8: Calculate Tax Relief with the formula" line="70">
 <kw name="Create Session" library="RequestsLibrary">
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220718 01:59:28.023" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">Creating Session using : alias=mysession, url=http://localhost:8080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${emp_dob}</var>
 <arg>1994.02.09</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${emp_dob} = 1994.02.09</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${emp_dob} = 1994.02.09</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Sal}</var>
 <arg>3500</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${Sal} = 3500</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${Sal} = 3500</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${Tax}</var>
 <arg>200</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${Tax} = 200</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${Tax} = 200</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Convert Date" library="DateTime">
 <var>${emp_year}</var>
 <arg>${emp_dob}</arg>
 <arg>result_format=%Y</arg>
 <doc>Converts between supported `date formats`.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${emp_year} = 1994</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${emp_year} = 1994</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <var>${date}</var>
 <arg>UTC</arg>
 <arg>exclude_millis=yes</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${date} = 2022-07-17 20:29:28</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${date} = 2022-07-17 20:32:40</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Convert Date" library="DateTime">
 <var>${date_year}</var>
 <arg>${date}</arg>
 <arg>result_format=%Y</arg>
 <doc>Converts between supported `date formats`.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${date_year} = 2022</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${date_year} = 2022</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${age}</var>
 <arg>${date_year}-${emp_year}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${age} = 28</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${age} = 28</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${gender}</var>
 <arg>F</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${gender} = F</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${gender} = F</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${salary}</var>
 <arg>3000</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${salary} = 3000</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${salary} = 3000</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${tax}</var>
 <arg>200</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${tax} = 200</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${tax} = 200</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Set Variable If" library="BuiltIn">
 <var>${var}</var>
@@ -398,10 +398,10 @@
 <arg>0.05</arg>
 <arg>Final else!</arg>
 <doc>Sets variable based on the given condition.</doc>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${var} = 0.8</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${var} = 0.8</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Set Variable If" library="BuiltIn">
 <var>${bonus}</var>
@@ -416,31 +416,31 @@
 <arg>500</arg>
 <arg>Final else!</arg>
 <doc>Sets variable based on the given condition.</doc>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${bonus} = 500</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${bonus} = 500</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${Data}</var>
 <arg>${salary}- ${tax}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${Data} = 2800</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${Data} = 2800</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${Tax_Relief}</var>
 <arg>${Data}* ${var}+${bonus}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220718 01:59:28.039" level="INFO">${Tax_Relief} = 2740.0</msg>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.039"/>
+<msg timestamp="20220718 02:02:40.011" level="INFO">${Tax_Relief} = 2740.0</msg>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${Tax_Relief}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220718 01:59:28.039" endtime="20220718 01:59:28.054"/>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:28.023" endtime="20220718 01:59:28.054"/>
+<status status="PASS" starttime="20220718 02:02:40.011" endtime="20220718 02:02:40.011"/>
 </test>
 <test id="s1-t9" name="TC9: Rounding of Tax Relief" line="97">
 <kw name="GET" library="RequestsLibrary">
@@ -449,23 +449,23 @@
 <arg>params=query=.00</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220718 01:59:28.070" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief?query=.00 
+<msg timestamp="20220718 02:02:40.026" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief?query=.00 
  path_url=/calculator/taxRelief?query=.00 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220718 01:59:28.070" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief?query=.00 
+<msg timestamp="20220718 02:02:40.026" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief?query=.00 
  status=200, reason= 
- headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:29:27 GMT'} 
- body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"}] 
+ headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:32:39 GMT'} 
+ body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"}] 
  </msg>
-<msg timestamp="20220718 01:59:28.070" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:28.054" endtime="20220718 01:59:28.070"/>
+<msg timestamp="20220718 02:02:40.026" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:40.026" endtime="20220718 02:02:40.026"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220718 01:59:28.070" endtime="20220718 01:59:28.070"/>
+<status status="PASS" starttime="20220718 02:02:40.026" endtime="20220718 02:02:40.026"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
@@ -473,40 +473,40 @@
 <arg>params=query=50.00</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220718 01:59:28.085" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief?query=50.00 
+<msg timestamp="20220718 02:02:40.042" level="INFO">GET Request : url=http://localhost:8080/calculator/taxRelief?query=50.00 
  path_url=/calculator/taxRelief?query=50.00 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220718 01:59:28.085" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief?query=50.00 
+<msg timestamp="20220718 02:02:40.042" level="INFO">GET Response : url=http://localhost:8080/calculator/taxRelief?query=50.00 
  status=200, reason= 
- headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:29:27 GMT'} 
- body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"}] 
+ headers={'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:32:39 GMT'} 
+ body=[{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"},{"natid":"0129","name":"ABC","relief":"1180.00"}] 
  </msg>
-<msg timestamp="20220718 01:59:28.085" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:28.070" endtime="20220718 01:59:28.085"/>
+<msg timestamp="20220718 02:02:40.042" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:40.026" endtime="20220718 02:02:40.042"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220718 01:59:28.085" endtime="20220718 01:59:28.085"/>
+<status status="PASS" starttime="20220718 02:02:40.042" endtime="20220718 02:02:40.042"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:28.054" endtime="20220718 01:59:28.085"/>
+<status status="PASS" starttime="20220718 02:02:40.026" endtime="20220718 02:02:40.042"/>
 </test>
 <test id="s1-t10" name="TC10: Verify the red colored &quot;Dispense now&quot; button and Cash dispensed page" line="103">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${base_url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220718 01:59:28.085" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080'.</msg>
-<status status="PASS" starttime="20220718 01:59:28.085" endtime="20220718 01:59:30.831"/>
+<msg timestamp="20220718 02:02:40.042" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20220718 02:02:40.042" endtime="20220718 02:02:42.901"/>
 </kw>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${property}</var>
 <arg>xpath:/html/body/div/div[2]/div/a[2]</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20220718 01:59:30.846" level="INFO">${property} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ccd206df6d92c9c917905bc69766e1de", element="5ac2d455-d684-4521-807e-ad3327541307")&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:30.831" endtime="20220718 01:59:30.846"/>
+<msg timestamp="20220718 02:02:42.938" level="INFO">${property} = &lt;selenium.webdriver.remote.webelement.WebElement (session="d93f1f43ccb6462d663f8d3cd4f6ceb1", element="940c7282-dccb-48e9-876a-85cd3f497065")&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:42.902" endtime="20220718 02:02:42.938"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <var>${bgcolor}</var>
@@ -514,15 +514,15 @@
 <arg>value_of_css_property</arg>
 <arg>background-color</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20220718 01:59:30.860" level="INFO">${bgcolor} = rgba(220, 53, 69, 1)</msg>
-<status status="PASS" starttime="20220718 01:59:30.847" endtime="20220718 01:59:30.860"/>
+<msg timestamp="20220718 02:02:42.950" level="INFO">${bgcolor} = rgba(220, 53, 69, 1)</msg>
+<status status="PASS" starttime="20220718 02:02:42.938" endtime="20220718 02:02:42.950"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${redcolor}</var>
 <arg>rgba(220, 53, 69, 1)</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220718 01:59:30.861" level="INFO">${redcolor} = rgba(220, 53, 69, 1)</msg>
-<status status="PASS" starttime="20220718 01:59:30.861" endtime="20220718 01:59:30.861"/>
+<msg timestamp="20220718 02:02:42.951" level="INFO">${redcolor} = rgba(220, 53, 69, 1)</msg>
+<status status="PASS" starttime="20220718 02:02:42.951" endtime="20220718 02:02:42.951"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${redcolor}' == '${bgcolor}'</arg>
@@ -532,13 +532,13 @@
 <kw name="Log To Console" library="BuiltIn">
 <arg>Background color is red</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220718 01:59:30.862" endtime="20220718 01:59:30.862"/>
+<status status="PASS" starttime="20220718 02:02:42.951" endtime="20220718 02:02:42.952"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:30.862" endtime="20220718 01:59:30.863"/>
+<status status="PASS" starttime="20220718 02:02:42.951" endtime="20220718 02:02:42.952"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220718 01:59:30.863" endtime="20220718 01:59:33.106"/>
+<status status="PASS" starttime="20220718 02:02:42.952" endtime="20220718 02:02:45.171"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
@@ -546,14 +546,14 @@
 <arg>params=query=Dispense!!</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220718 01:59:33.122" level="INFO">GET Request : url=http://localhost:8080/dispense?query=Dispense!! 
+<msg timestamp="20220718 02:02:45.185" level="INFO">GET Request : url=http://localhost:8080/dispense?query=Dispense!! 
  path_url=/dispense?query=Dispense!! 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220718 01:59:33.122" level="INFO">GET Response : url=http://localhost:8080/dispense?query=Dispense!! 
+<msg timestamp="20220718 02:02:45.185" level="INFO">GET Response : url=http://localhost:8080/dispense?query=Dispense!! 
  status=200, reason= 
- headers={'Content-Type': 'text/html;charset=UTF-8', 'Content-Language': 'en-IN', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:29:33 GMT'} 
+ headers={'Content-Type': 'text/html;charset=UTF-8', 'Content-Language': 'en-IN', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:32:45 GMT'} 
  body=&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -588,8 +588,8 @@
 &lt;/html&gt;
  
  </msg>
-<msg timestamp="20220718 01:59:33.122" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:33.106" endtime="20220718 01:59:33.122"/>
+<msg timestamp="20220718 02:02:45.185" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:45.171" endtime="20220718 02:02:45.185"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
@@ -597,14 +597,14 @@
 <arg>params=query=Cash dispensed</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220718 01:59:33.137" level="INFO">GET Request : url=http://localhost:8080/dispense?query=Cash%20dispensed 
+<msg timestamp="20220718 02:02:45.212" level="INFO">GET Request : url=http://localhost:8080/dispense?query=Cash%20dispensed 
  path_url=/dispense?query=Cash%20dispensed 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220718 01:59:33.137" level="INFO">GET Response : url=http://localhost:8080/dispense?query=Cash%20dispensed 
+<msg timestamp="20220718 02:02:45.212" level="INFO">GET Response : url=http://localhost:8080/dispense?query=Cash%20dispensed 
  status=200, reason= 
- headers={'Content-Type': 'text/html;charset=UTF-8', 'Content-Language': 'en-IN', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:29:33 GMT'} 
+ headers={'Content-Type': 'text/html;charset=UTF-8', 'Content-Language': 'en-IN', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 17 Jul 2022 20:32:45 GMT'} 
  body=&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -639,12 +639,12 @@
 &lt;/html&gt;
  
  </msg>
-<msg timestamp="20220718 01:59:33.137" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220718 01:59:33.122" endtime="20220718 01:59:33.137"/>
+<msg timestamp="20220718 02:02:45.212" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220718 02:02:45.185" endtime="20220718 02:02:45.212"/>
 </kw>
-<status status="PASS" starttime="20220718 01:59:28.085" endtime="20220718 01:59:33.137"/>
+<status status="PASS" starttime="20220718 02:02:40.042" endtime="20220718 02:02:45.212"/>
 </test>
-<status status="PASS" starttime="20220718 01:59:27.449" endtime="20220718 01:59:33.137"/>
+<status status="PASS" starttime="20220718 02:02:39.476" endtime="20220718 02:02:45.214"/>
 </suite>
 <statistics>
 <total>

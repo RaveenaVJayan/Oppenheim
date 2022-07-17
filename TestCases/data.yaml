@@ -1,0 +1,2 @@
+REQUESTDATA:
+   insert_multiple: { "records" : [{ "birthday": 01101989, "gender": "MALE", "name": "ROBIN", "natid": "111-$$$$$$$", "salary": "true", "tax": "true" }, { "birthday": 05111991, "gender": "FEMALE", "name": "LUCY", "natid": "122-$$$$$$$", "salary": "true", "tax": "false" }, { "birthday": 09122000, "gender": "MALE", "name": "CHARLES", "natid": "132-$$$$$$$", "salary": "false", "tax": "true" }]}
