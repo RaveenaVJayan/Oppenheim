@@ -22,7 +22,17 @@ TC3: Insert single record of working class hero with invalid gender value male/f
 
 TC4: Insert multiple record of working class hero
 
-TC5: Display the tax relief summary
+TC5:Insert records by uploading CSV file
 
-TC6: Dispense Tax relief
+TC6: Display NatID, Tax Relief , Name
+
+TC7: Mask the NatID from 5th character
+
+TC8: Calculate Tax Relief with the formula
+
+TC9: Rounding of Tax Relief
+
+TC10: Verify the red colored "Dispense now" button and Cash dispensed page
+
+
 
